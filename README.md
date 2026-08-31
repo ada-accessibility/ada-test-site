@@ -22,6 +22,9 @@ npm run dev
 
 ## Deploy (GitHub Pages)
 
-```
-npm run deploy
-```
+Automatic via GitHub Actions (`.github/workflows/deploy.yml`) — no manual step needed:
+
+- Push to `main` → deploys to the site root: https://vinothrajm0407.github.io/ada-test-site/
+- Push to any `ada/fix/**` branch → deploys a preview at `/preview/<branch>/`, e.g. https://vinothrajm0407.github.io/ada-test-site/preview/ada/fix/button-name-abc123/
+
+Preview deployments aren't auto-removed when a branch is deleted — clean up `preview/<branch>/` on the `gh-pages` branch manually if it accumulates.
