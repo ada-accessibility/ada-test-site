@@ -28,3 +28,4 @@ Automatic via GitHub Actions (`.github/workflows/deploy.yml`) — no manual step
 - Push to any `ada/fix/**` branch → deploys a preview at `/preview/<branch>/`, e.g. https://vinothrajm0407.github.io/ada-test-site/preview/ada/fix/button-name-abc123/
 
 Preview deployments aren't auto-removed when a branch is deleted — clean up `preview/<branch>/` on the `gh-pages` branch manually if it accumulates.
+<!-- org transfer verified -->
