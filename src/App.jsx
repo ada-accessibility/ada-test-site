@@ -15,7 +15,7 @@ export default function App() {
 
       <h1>New Arrivals</h1>
       {/* violation: heading level skipped, h1 straight to h3 (WCAG 1.3.1) */}
-      <h3 className="section-label">Outdoor gear for every trail</h3>
+      <h2 className="section-label">Outdoor gear for every trail</h2>
 
       <div className="product-grid">
         {PRODUCTS.map((p) => (
