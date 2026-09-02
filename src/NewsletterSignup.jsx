@@ -10,10 +10,7 @@ export default function NewsletterSignup() {
         </svg>
       </a>
 
-      <input type="text" className="full-name-input" placeholder="Full name" autoComplete="name" aria-describedby="hint" />
-      {/* Tier 3 violation: two elements share the id an aria-describedby points to (axe: duplicate-id-aria) */}
-      <span id="hint">Note</span>
-      <span id="hint">Note</span>
+      <input type="text" className="full-name-input" placeholder="Full name" autoComplete="name" />
 
       {/* Tier 2 violation: custom checkbox missing required aria-checked (axe: aria-required-attr) */}
       <div role="checkbox" className="consent-toggle" tabIndex={0}>

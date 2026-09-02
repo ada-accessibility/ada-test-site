@@ -25,16 +25,16 @@ so no patch is even attempted.
 | `src/NewsletterSignup.jsx` | Iframe with no title (`frame-title`) | 2 |
 | `index.html` | No `<title>` (`document-title`) | 3 |
 | `index.html` | Zoom disabled via viewport meta (`meta-viewport`) | 3 |
-| `src/NewsletterSignup.jsx` | `aria-describedby` points to a duplicated `id` (`duplicate-id-aria`) | 3 |
 
 Notes:
 - `autocomplete-valid` is deliberately **not** included — it's tagged `wcag21aa`, and the scan
   in `scripts/run_ada_check_python.py` only runs `wcag2a`/`wcag2aa`/`best-practice`, so that rule
   can never surface here regardless of the Best Practice toggle. Widening that tag list is a
   separate change (it affects every scan, not just this site).
-- Plain `duplicate-id` and `duplicate-id-active` are tagged `deprecated`/`wcag2a-obsolete` in the
-  current axe-core version (WCAG 4.1.1 was dropped from WCAG 2.2) and never run either — only
-  `duplicate-id-aria` is still active.
+- No `duplicate-id` example: the plain rule and `duplicate-id-active` are tagged
+  `deprecated`/`wcag2a-obsolete` (WCAG 4.1.1 was dropped from WCAG 2.2) and never run; the one
+  still-active variant, `duplicate-id-aria`, only ever reports as "incomplete" (needs manual
+  review), never as a hard violation — not a fair automatic Tier 3 example.
 
 ## Local dev
 
