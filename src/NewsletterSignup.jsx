@@ -19,7 +19,7 @@ export default function NewsletterSignup() {
       </div>
 
       {/* Tier 2 violation: iframe with no title (axe: frame-title) */}
-      <iframe className="promo-video" src="https://example.com/promo" title="Promotional video" />
+      <iframe className="promo-video" src="https://example.com/promo" title="Promo video" />
     </section>
   )
 }
