@@ -14,7 +14,7 @@ export default function NewsletterSignup() {
       <input type="text" className="full-name-input" placeholder="Full name" autoComplete="fullname" />
 
       {/* Tier 2 violation: custom checkbox missing required aria-checked (axe: aria-required-attr) */}
-      <div role="checkbox" className="consent-toggle" tabIndex={0}>
+      <div role="checkbox" aria-checked="false" className="consent-toggle" tabIndex={0}>
         I agree to receive emails
       </div>
 
