@@ -3,7 +3,7 @@ export default function ContactForm() {
     <form className="contact-form">
       <h2>Get in touch</h2>
       {/* violation: input with no associated label (WCAG 1.3.1 / 4.1.2) */}
-      <input type="email" placeholder="Work email" />
+      <input type="email" placeholder="Work email" aria-label="Work email" />
       <input type="text" placeholder="Message" />
       {/* violation: select with no accessible name (WCAG 4.1.2, axe: select-name) — not a Tier 1 rule */}
       <select>
