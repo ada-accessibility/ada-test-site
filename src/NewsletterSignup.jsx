@@ -1,6 +1,6 @@
 export default function NewsletterSignup() {
   return (
-    <section className="newsletter">
+    <section className="newsletter" aria-label="Newsletter">
       <h2>Stay in the loop</h2>
 
       {/* Tier 1 violation: icon-only link with no accessible name (axe: link-name) */}
