@@ -14,18 +14,20 @@ export default function App() {
     <div className="page">
       <Header />
 
-      <h1>New Arrivals</h1>
-      {/* violation: heading level skipped, h1 straight to h3 (WCAG 1.3.1) */}
-      <h2 className="section-label">Outdoor gear for every trail</h2>
+      <main>
+        <h1>New Arrivals</h1>
+        {/* violation: heading level skipped, h1 straight to h3 (WCAG 1.3.1) */}
+        <h2 className="section-label">Outdoor gear for every trail</h2>
 
-      <div className="product-grid">
-        {PRODUCTS.map((p) => (
-          <ProductCard key={p.name} {...p} />
-        ))}
-      </div>
+        <div className="product-grid">
+          {PRODUCTS.map((p) => (
+            <ProductCard key={p.name} {...p} />
+          ))}
+        </div>
 
-      <ContactForm />
-      <NewsletterSignup />
+        <ContactForm />
+        <NewsletterSignup />
+      </main>
     </div>
   )
 }
