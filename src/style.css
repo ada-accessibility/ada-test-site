@@ -105,6 +105,6 @@ body {
 
 /* violation: fails WCAG 1.4.3 contrast minimum (light gray on white) */
 .fine-print {
-  color: #cfcfcf;
+  color: #767676;
   font-size: 0.8rem;
 }
