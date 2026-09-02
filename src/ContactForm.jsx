@@ -1,6 +1,6 @@
 export default function ContactForm() {
   return (
-    <form className="contact-form">
+    <form className="contact-form" aria-label="Contact form">
       <h2>Get in touch</h2>
       {/* violation: input with no associated label (WCAG 1.3.1 / 4.1.2) */}
       <input type="email" placeholder="Work email" aria-label="Work email" />
