@@ -6,7 +6,7 @@ export default function ContactForm() {
       <input type="email" placeholder="Work email" aria-label="Work email" />
       <input type="text" placeholder="Message" />
       {/* violation: select with no accessible name (WCAG 4.1.2, axe: select-name) — not a Tier 1 rule */}
-      <select>
+      <select aria-label="Country">
         <option value="">Country</option>
         <option value="us">United States</option>
         <option value="ca">Canada</option>
