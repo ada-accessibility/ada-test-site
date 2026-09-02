@@ -4,7 +4,7 @@ export default function NewsletterSignup() {
       <h2>Stay in the loop</h2>
 
       {/* Tier 1 violation: icon-only link with no accessible name (axe: link-name) */}
-      <a href="#faq" className="faq-expand">
+      <a href="#faq" className="faq-expand" aria-label="Learn more">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 16l-6-6h12z" />
         </svg>
