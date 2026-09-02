@@ -18,11 +18,11 @@ export default function App() {
       {/* violation: heading level skipped, h1 straight to h3 (WCAG 1.3.1) */}
       <h2 className="section-label">Outdoor gear for every trail</h2>
 
-      <div className="product-grid">
+      <main className="product-grid">
         {PRODUCTS.map((p) => (
           <ProductCard key={p.name} {...p} />
         ))}
-      </div>
+      </main>
 
       <ContactForm />
       <NewsletterSignup />
