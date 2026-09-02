@@ -4,14 +4,29 @@ A tiny React storefront seeded with intentional accessibility violations, used a
 
 ## Known violations (by design)
 
-| File | Violation | WCAG |
+Auto-Fix tier below reflects `RULES_WITH_FALLBACK` in `backend/services/auto_fix_service.py`:
+Tier 1 = deterministic fallback, auto-merges free. Tier 2 = Gemini drafts a patch, opens a PR
+for review. Tier 3 = `locate_source()` can't safely pin the violation to one place in the repo,
+so no patch is even attempted.
+
+| File | Violation (axe rule) | Tier |
 |---|---|---|
-| `src/Header.jsx` | Icon-only button, no accessible name | 4.1.2 |
-| `src/ProductCard.jsx` | Image with no `alt` text | 1.1.1 |
-| `src/ProductCard.jsx` | Link with no discernible purpose ("Click here") | 2.4.4 |
-| `src/ContactForm.jsx` | Input with no associated label | 1.3.1 / 4.1.2 |
-| `src/ContactForm.jsx` | Low-contrast text (`.fine-print`) | 1.4.3 |
-| `src/App.jsx` | Skipped heading level (h1 → h3) | 1.3.1 |
+| `index.html` | `<html>` has no `lang` attribute (`html-has-lang`) | 1 |
+| `src/Header.jsx` | Icon-only button, no accessible name (`button-name`) | 1 |
+| `src/ProductCard.jsx` | Image with no `alt` text (`image-alt`) | 1 |
+| `src/ProductCard.jsx` | Icon-only link, no accessible name (`link-name`) | 1 |
+| `src/ContactForm.jsx` | Input with no associated label (`label`) | 1 |
+| `src/style.css` | Low-contrast text, `.fine-print` (`color-contrast`) | 1 |
+| `src/App.jsx` | Skipped heading level, h1 → h3 (`heading-order`) | 1 |
+| `src/App.jsx` | Page content not contained by a landmark (`region`, `landmark-one-main`) | 2 |
+| `src/ContactForm.jsx` | Select with no accessible name (`select-name`) | 2 |
+| `src/ContactForm.jsx` | Invalid `autocomplete` token (`autocomplete-valid`) | 2 |
+| `src/NewsletterSignup.jsx` | Invalid `autocomplete` token, second instance (`autocomplete-valid`) | 2 |
+| `src/NewsletterSignup.jsx` | Custom checkbox missing `aria-checked` (`aria-required-attr`) | 2 |
+| `src/NewsletterSignup.jsx` | Iframe with no title (`frame-title`) | 2 |
+| `index.html` | No `<title>` (`document-title`) | 3 |
+| `index.html` | Zoom disabled via viewport meta (`meta-viewport`) | 3 |
+| `src/NewsletterSignup.jsx` | Duplicate `id`, no other signal to disambiguate (`duplicate-id`) | 3 |
 
 ## Local dev
 

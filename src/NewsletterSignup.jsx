@@ -20,6 +20,10 @@ export default function NewsletterSignup() {
 
       {/* Tier 2 violation: iframe with no title (axe: frame-title) */}
       <iframe className="promo-video" src="https://example.com/promo" />
+
+      {/* Tier 3 violation: duplicate id, no other signal to tell them apart (axe: duplicate-id) */}
+      <span id="promo-badge">New</span>
+      <span id="promo-badge">Live</span>
     </section>
   )
 }

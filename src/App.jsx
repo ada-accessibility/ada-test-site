@@ -15,8 +15,8 @@ export default function App() {
       <Header />
 
       <h1>New Arrivals</h1>
-      {/* violation: heading level skipped, h1 straight to h3 (WCAG 1.3.1) */}
-      <h2 className="section-label">Outdoor gear for every trail</h2>
+      {/* Tier 1 violation: heading level skipped, h1 straight to h3 (axe: heading-order) */}
+      <h3 className="section-label">Outdoor gear for every trail</h3>
 
       <div className="product-grid">
         {PRODUCTS.map((p) => (
@@ -24,7 +24,7 @@ export default function App() {
         ))}
       </div>
 
-      {/* violation: page content not contained by a landmark (axe: region, landmark-one-main) */}
+      {/* Tier 2 violation: page content not contained by a landmark (axe: region, landmark-one-main) */}
       <ContactForm />
       <NewsletterSignup />
     </div>

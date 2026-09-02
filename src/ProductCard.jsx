@@ -1,12 +1,16 @@
 export default function ProductCard({ name, price, image }) {
   return (
     <div className="product-card">
-      {/* violation: image with no alt text (WCAG 1.1.1) */}
-      <img src={image} alt="Jacket" />
+      {/* Tier 1 violation: image with no alt text (axe: image-alt) */}
+      <img src={image} />
       <p className="product-name">{name}</p>
       <p className="product-price">{price}</p>
-      {/* violation: link with no discernible purpose (WCAG 2.4.4) */}
-      <a href="#" className="product-link" aria-label="Learn more">Click here</a>
+      {/* Tier 1 violation: icon-only link, no accessible name (axe: link-name) */}
+      <a href="#" className="product-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </a>
     </div>
   )
 }

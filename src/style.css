@@ -103,8 +103,8 @@ body {
   cursor: pointer;
 }
 
-/* violation: fails WCAG 1.4.3 contrast minimum (light gray on white) */
+/* Tier 1 violation: fails WCAG 1.4.3 contrast minimum (light gray on white) (axe: color-contrast) */
 .fine-print {
-  color: #767676;
+  color: #aaaaaa;
   font-size: 0.8rem;
 }
