@@ -20,13 +20,17 @@ so no patch is even attempted.
 | `src/App.jsx` | Skipped heading level, h1 → h3 (`heading-order`) | 1 |
 | `src/App.jsx` | Page content not contained by a landmark (`region`, `landmark-one-main`) | 2 |
 | `src/ContactForm.jsx` | Select with no accessible name (`select-name`) | 2 |
-| `src/ContactForm.jsx` | Invalid `autocomplete` token (`autocomplete-valid`) | 2 |
-| `src/NewsletterSignup.jsx` | Invalid `autocomplete` token, second instance (`autocomplete-valid`) | 2 |
+| `src/ContactForm.jsx` | Invalid ARIA attribute value, `aria-invalid="yes"` (`aria-valid-attr-value`) | 2 |
 | `src/NewsletterSignup.jsx` | Custom checkbox missing `aria-checked` (`aria-required-attr`) | 2 |
 | `src/NewsletterSignup.jsx` | Iframe with no title (`frame-title`) | 2 |
 | `index.html` | No `<title>` (`document-title`) | 3 |
 | `index.html` | Zoom disabled via viewport meta (`meta-viewport`) | 3 |
-| `src/NewsletterSignup.jsx` | Duplicate `id`, no other signal to disambiguate (`duplicate-id`) | 3 |
+| `src/NewsletterSignup.jsx` | Duplicate `id` on two focusable buttons (`duplicate-id-active`) | 3 |
+
+Note: `autocomplete-valid` is deliberately **not** included — it's tagged `wcag21aa`, and the scan
+in `scripts/run_ada_check_python.py` only runs `wcag2a`/`wcag2aa`/`best-practice`, so that rule can
+never surface here regardless of the Best Practice toggle. Widening that tag list is a separate
+change (it affects every scan, not just this site).
 
 ## Local dev
 

@@ -10,8 +10,7 @@ export default function NewsletterSignup() {
         </svg>
       </a>
 
-      {/* Tier 2 violation: invalid autocomplete token — should be "name", not "fullname" (axe: autocomplete-valid) */}
-      <input type="text" className="full-name-input" placeholder="Full name" autoComplete="fullname" />
+      <input type="text" className="full-name-input" placeholder="Full name" autoComplete="name" />
 
       {/* Tier 2 violation: custom checkbox missing required aria-checked (axe: aria-required-attr) */}
       <div role="checkbox" className="consent-toggle" tabIndex={0}>
@@ -21,9 +20,9 @@ export default function NewsletterSignup() {
       {/* Tier 2 violation: iframe with no title (axe: frame-title) */}
       <iframe className="promo-video" src="https://example.com/promo" />
 
-      {/* Tier 3 violation: duplicate id, no other signal to tell them apart (axe: duplicate-id) */}
-      <span id="promo-badge">New</span>
-      <span id="promo-badge">Live</span>
+      {/* Tier 3 violation: duplicate id on focusable elements, no other signal to tell them apart (axe: duplicate-id-active) */}
+      <button id="promo-badge">Badge</button>
+      <button id="promo-badge">Badge</button>
     </section>
   )
 }
