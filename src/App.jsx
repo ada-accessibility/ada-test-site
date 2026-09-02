@@ -1,6 +1,7 @@
 import Header from './Header.jsx'
 import ProductCard from './ProductCard.jsx'
 import ContactForm from './ContactForm.jsx'
+import NewsletterSignup from './NewsletterSignup.jsx'
 
 const PRODUCTS = [
   { name: 'Trail Jacket', price: '$129', image: '/jacket.svg' },
@@ -24,6 +25,7 @@ export default function App() {
       </div>
 
       <ContactForm />
+      <NewsletterSignup />
     </div>
   )
 }
